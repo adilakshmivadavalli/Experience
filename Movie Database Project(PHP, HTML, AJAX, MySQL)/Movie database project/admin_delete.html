@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Record Modify Page</title>
+        <link href="styles.css" type="text/css" rel="stylesheet"/>
+        <script>
+            function getCookie(cname) {
+                 var name = cname + "=";
+                 var decodedCookie = decodeURIComponent(document.cookie);
+                 var ca = decodedCookie.split(';');
+                 for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            function get_values(){  
+                
+                document.getElementById('movie_name_box').value = getCookie('name');
+                document.getElementById('genre_box').value = getCookie('genre');
+                document.getElementById('tomatoes_box').value = getCookie('tomatoes');
+                document.getElementById('audience_box').value = getCookie('audience');
+                document.getElementById('budget_box').value = getCookie('budget');
+                document.getElementById('year_box').value = getCookie('year');
+            }
+        </script>
+    </head>
+    <body onload="get_values()">
+        <div id="logo" class="ax_default image">
+            <img id="logo_img"  src="Logo.png"/>
+        </div>
+        <hr/>
+
+        <div id="modify_form" class="ax_default">
+            <h2>Delete Movie Record</h2>
+            <form name="modifyForm" action="admin_delete.php">
+                Movie Title: </br>
+                <input size="28" type="text" name="del_movie_name" id="movie_name_box" readonly></br>
+                Genre: </br>
+                <select name="del_genre" id="genre_box">
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                </select></br>
+                Rotten Tomatoes Ratings %: </br>
+                <input size="10" type="text" name="del_tomatoes" id="tomatoes_box" readonly></br>
+                Audience Ratings %: </br>
+                <input size="10" type="text" name="del_audience" id="audience_box" readonly></br>
+                Budget in Millions $: </br>
+                <input size="10" type="text" name="del_budget" id="budget_box" readonly></br>
+                Year of release: </br>
+                <input size="10" type="text" name="del_year" id="year_box" readonly></br>
+                </br>
+                <input class="button1" type="button" onclick="location.href='admin_page.html'" value = "Cancel">&nbsp;&nbsp;&nbsp;&nbsp;<input class="button1" type="submit" value="Delete">          
+            </form>
+        </div>
+    </body>
+</html>    

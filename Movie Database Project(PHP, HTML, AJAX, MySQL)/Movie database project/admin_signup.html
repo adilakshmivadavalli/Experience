@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Movie DB</title>
+        <link href="styles.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="logo" class="ax_default image">
+            <img id="logo_img"  src="Logo.png"/>
+        </div>
+        <div class="ax_default">
+            <h2>Administrator Sign Up</h2>
+        </div>
+             
+        <div id="admin_signup_form" class="ax_default">
+            <form method="GET" action="admin_signup.php" name="signup_form" >
+                Username: </br>
+                <input size="30" type="text" name="user_name" id="user_name_box"></br>
+                Password: </br>
+                <input size="30" type="password" name="user_password" id="user_password_box"></br>
+                Email: </br>
+                <input size="30" type="text" name="user_email" id="user_email_min"></br> 
+                <br>
+                <input class="button1" type="button" onclick="reset()" value = "Reset">&nbsp;&nbsp;&nbsp;&nbsp;<input class="button1" type="submit" value = "Sign Up">
+            </form>
+        </div>
+    </body>
+     
+</html>

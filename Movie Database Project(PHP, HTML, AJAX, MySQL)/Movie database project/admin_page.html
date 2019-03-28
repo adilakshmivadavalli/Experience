@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Movie DB</title>
+        <link href="styles.css" type="text/css" rel="stylesheet"/>
+        <script>
+            function showResult(){
+                var results_area = document.getElementById("results");
+                var xmlhttp = new XMLHttpRequest();
+                
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4 && this.status == 200)
+                    results_area.innerHTML = xmlhttp.responseText;
+                };
+                
+                var movie_name = document.getElementById("movie_name_box").value;
+                var genre = document.getElementById("genre_box").value;
+                var tomatoes_min = document.getElementById("tomatoes_box_min").value;
+                var tomatoes_max = document.getElementById("tomatoes_box_max").value;
+                var audience_min = document.getElementById("audience_box_min").value;
+                var audience_max = document.getElementById("audience_box_max").value;
+                var budget_min = document.getElementById("budget_box_min").value;
+                var budget_max = document.getElementById("budget_box_max").value;
+                var year_min = document.getElementById("year_box_min").value;
+                var year_max = document.getElementById("year_box_max").value;
+                
+                var parameter;
+                
+                parameter = "movie_name="+ movie_name;
+                parameter += "&genre="+ genre;
+                parameter += "&tomatoes_min="+tomatoes_min;
+                parameter += "&tomatoes_max="+tomatoes_max;
+                parameter += "&audience_min="+audience_min;
+                parameter += "&audience_max="+audience_max;
+                parameter += "&budget_min="+budget_min;
+                parameter += "&budget_max="+budget_max;
+                parameter += "&year_min="+year_min;
+                parameter += "&year_max="+year_max;               
+                      
+                xmlhttp.open("GET", "admin_search.php?"+parameter, false);
+                xmlhttp.send();              
+            }
+            
+            function movie_modify(x){
+                table = x.parentNode.parentNode.parentNode;
+                row = x.parentNode.parentNode.rowIndex;
+                
+                get_name = table.rows[row].cells[0].innerHTML;
+                get_genre = table.rows[row].cells[1].innerHTML;
+                get_tomatoes = table.rows[row].cells[2].innerHTML;
+                get_audience = table.rows[row].cells[3].innerHTML;
+                get_budget = table.rows[row].cells[4].innerHTML;
+                get_year = table.rows[row].cells[5].innerHTML;
+                
+                document.cookie = "name="+get_name+";path=/";
+                document.cookie = "genre="+get_genre+";path=/";
+                document.cookie = "tomatoes="+get_tomatoes+";path=/";
+                document.cookie = "audience="+get_audience+";path=/";
+                document.cookie = "budget="+get_budget+";path=/";
+                document.cookie = "year="+get_year+";path=/";
+                
+                location.href = "admin_modify.html";
+            }
+            
+            function movie_delete(x){
+                table = x.parentNode.parentNode.parentNode;
+                row = x.parentNode.parentNode.rowIndex;
+                
+                get_name = table.rows[row].cells[0].innerHTML;
+                get_genre = table.rows[row].cells[1].innerHTML;
+                get_tomatoes = table.rows[row].cells[2].innerHTML;
+                get_audience = table.rows[row].cells[3].innerHTML;
+                get_budget = table.rows[row].cells[4].innerHTML;
+                get_year = table.rows[row].cells[5].innerHTML;
+                
+                document.cookie = "name="+get_name+";path=/";
+                document.cookie = "genre="+get_genre+";path=/";
+                document.cookie = "tomatoes="+get_tomatoes+";path=/";
+                document.cookie = "audience="+get_audience+";path=/";
+                document.cookie = "budget="+get_budget+";path=/";
+                document.cookie = "year="+get_year+";path=/";
+                
+                location.href = "admin_delete.html";
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="logo" class="ax_default image">
+            <img id="logo_img"  src="Logo.png"/>
+        </div>
+        <hr/>
+
+        <div id="add_form" class="ax_default">
+            <h3>Add New Movie Record</h3>
+            <form name="addForm" action="admin_insert.php">
+                Movie Title: </br>
+                <input size="28" type="text" name="add_movie_name" id="add_movie_name_box"></br>
+                Genre: </br>
+                <select name="add_genre" id="add_genre_box">
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                </select></br>
+                Rotten Tomatoes Ratings %: </br>
+                <input size="10" type="text" name="add_tomatoes" id="add_tomatoes_box_"></br>
+                Audience Ratings %: </br>
+                <input size="10" type="text" name="add_audience" id="add_audience_box_"></br>
+                Budget in Millions $: </br>
+                <input size="10" type="text" name="add_budget" id="add_budget_box_"></br>
+                Year of release: </br>
+                <input size="10" type="text" name="add_year" id="add_year_box_"></br>
+                </br>
+                <input class="button1" type="button" onclick="reset()" value = "Reset">&nbsp;&nbsp;&nbsp;&nbsp;<input class="button1" type="submit" value="Add">          
+            </form>
+        </div>
+        <hr/>
+        <div id="search_form" class="ax_default">
+            <h3>Search Movie Record</h3>
+            <form name="searchForm">
+                Movie Title: </br>
+                <input size="28" type="text" name="movie_name" id="movie_name_box"></br>
+                Genre: </br>
+                <select name="genre" id="genre_box">
+                    <option value="%">ANY</option>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                </select></br>
+                Rotten Tomatoes Ratings % (Min to Max): </br>
+                <input size="10" type="text" name="tomatoes_min" id="tomatoes_box_min">&nbsp;&nbsp;to&nbsp;&nbsp;<input size="10" type="text" name="tomatoes_max" id="tomatoes_box_max"></br>
+                Audience Ratings %: (Min to Max)</br>
+                <input size="10" type="text" name="audience_min" id="audience_box_min">&nbsp;&nbsp;to&nbsp;&nbsp;<input size="10" type="text" name="audience_max" id="audience_box_max"></br>
+                Budget in Millions $: (Min to Max)</br>
+                <input size="10" type="text" name="budget_min" id="budget_box_min">&nbsp;&nbsp;to&nbsp;&nbsp;<input size="10" type="text" name="budget_max" id="budget_box_max"></br>
+                Year of release: (Min to Max)</br>
+                <input size="10" type="text" name="year_min" id="year_box_min">&nbsp;&nbsp;to&nbsp;&nbsp;<input size="10" type="text" name="year_max" id="year_box_max"></br>
+                </br>
+                <input class="button1" type="button" onclick="reset()" value = "Reset">&nbsp;&nbsp;&nbsp;&nbsp;<input class="button1" type="button" onclick="showResult()" value = "Search">          
+            </form>
+        </div>
+        <hr/>
+        <div class="ax_default" id ="results">   
+        </div>
+    </body>
+     
+</html>
