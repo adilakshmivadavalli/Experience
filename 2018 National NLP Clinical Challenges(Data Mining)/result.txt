@@ -1,0 +1,106 @@
+360.xml, HBA1C, HB0, not met
+348.xml, HBA1C, HB0, not met
+229.xml, HBA1C, HB0, not met
+201.xml, HBA1C, HB0, not met
+361.xml, HBA1C, HB0, not met
+217.xml, HBA1C, HB0, met
+217.xml, HBA1C, HB1, met
+216.xml, HBA1C, HB0, not met
+158.xml, HBA1C, HB0, not met
+399.xml, HBA1C, HB0, not met
+213.xml, HBA1C, HB0, not met
+373.xml, HBA1C, HB0, met
+165.xml, HBA1C, HB0, not met
+171.xml, HBA1C, HB0, not met
+167.xml, HBA1C, HB0, not met
+173.xml, HBA1C, HB0, not met
+359.xml, HBA1C, HB0, not met
+239.xml, HBA1C, HB0, not met
+205.xml, HBA1C, HB0, not met
+370.xml, HBA1C, HB0, not met
+166.xml, HBA1C, HB0, not met
+115.xml, HBA1C, HB0, met
+317.xml, HBA1C, HB0, not met
+277.xml, HBA1C, HB0, met
+277.xml, HBA1C, HB1, met
+276.xml, HBA1C, HB0, not met
+314.xml, HBA1C, HB0, met
+328.xml, HBA1C, HB0, not met
+274.xml, HBA1C, HB0, not met
+305.xml, HBA1C, HB0, met
+265.xml, HBA1C, HB0, met
+270.xml, HBA1C, HB0, not met
+266.xml, HBA1C, HB0, met
+120.xml, HBA1C, HB0, not met
+108.xml, HBA1C, HB0, not met
+322.xml, HBA1C, HB0, met
+322.xml, HBA1C, HB1, met
+322.xml, HBA1C, HB2, met
+294.xml, HBA1C, HB0, met
+323.xml, HBA1C, HB0, met
+135.xml, HBA1C, HB0, not met
+137.xml, HBA1C, HB0, met
+137.xml, HBA1C, HB1, met
+321.xml, HBA1C, HB0, not met
+309.xml, HBA1C, HB0, not met
+269.xml, HBA1C, HB0, met
+282.xml, HBA1C, HB0, not met
+296.xml, HBA1C, HB0, met
+240.xml, HBA1C, HB0, not met
+320.xml, HBA1C, HB0, not met
+293.xml, HBA1C, HB0, met
+251.xml, HBA1C, HB0, not met
+119.xml, HBA1C, HB0, not met
+131.xml, HBA1C, HB0, met
+131.xml, HBA1C, HB1, met
+131.xml, HBA1C, HB2, met
+131.xml, HBA1C, HB3, met
+131.xml, HBA1C, HB4, met
+131.xml, HBA1C, HB5, met
+131.xml, HBA1C, HB6, met
+131.xml, HBA1C, HB7, met
+327.xml, HBA1C, HB0, not met
+285.xml, HBA1C, HB0, met
+246.xml, HBA1C, HB0, not met
+118.xml, HBA1C, HB0, not met
+194.xml, HBA1C, HB0, not met
+369.xml, HBA1C, HB0, not met
+396.xml, HBA1C, HB0, not met
+383.xml, HBA1C, HB0, not met
+368.xml, HBA1C, HB0, not met
+156.xml, HBA1C, HB0, not met
+140.xml, HBA1C, HB0, not met
+342.xml, HBA1C, HB0, met
+236.xml, HBA1C, HB0, not met
+394.xml, HBA1C, HB0, met
+343.xml, HBA1C, HB0, not met
+182.xml, HBA1C, HB0, not met
+141.xml, HBA1C, HB0, not met
+155.xml, HBA1C, HB0, not met
+192.xml, HBA1C, HB0, met
+192.xml, HBA1C, HB1, met
+353.xml, HBA1C, HB0, not met
+347.xml, HBA1C, HB0, met
+384.xml, HBA1C, HB0, met
+227.xml, HBA1C, HB0, met
+233.xml, HBA1C, HB0, not met
+232.xml, HBA1C, HB0, not met
+346.xml, HBA1C, HB0, not met
+352.xml, HBA1C, HB0, met
+352.xml, HBA1C, HB1, met
+352.xml, HBA1C, HB2, met
+193.xml, HBA1C, HB0, met
+193.xml, HBA1C, HB1, met
+178.xml, HBA1C, HB0, met
+178.xml, HBA1C, HB1, met
+178.xml, HBA1C, HB2, met
+350.xml, HBA1C, HB0, not met
+218.xml, HBA1C, HB0, met
+218.xml, HBA1C, HB1, met
+218.xml, HBA1C, HB2, met
+224.xml, HBA1C, HB0, not met
+386.xml, HBA1C, HB0, met
+351.xml, HBA1C, HB0, not met
+379.xml, HBA1C, HB0, met
+190.xml, HBA1C, HB0, not met
+153.xml, HBA1C, HB0, not met
